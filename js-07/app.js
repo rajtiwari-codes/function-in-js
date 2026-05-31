@@ -34,13 +34,13 @@ const student={
     console.log(this);
 // return this.name;
     },
-    getInfo1: function (){//arrow  functiosn this?? parent  so in this paerent kon hai function see up uska context student hai to print student details
+    getInfo1: function (){//arrow  functiosn this?? parent  so in this paerent kon hai function see up uska context student hai to print //student//
         setTimeout(()=>{
             console.log(this);
         },2000);
     },
     getInfo2: function (){
-        setTimeout(function(){//normal function this?? who call so function hi call kar raha see up line so finction this ?? window
+        setTimeout(function(){//normal function this?? who call so function hi call kar raha see up line so finction this ??// window//
             console.log(this);
         },3000);
     },
