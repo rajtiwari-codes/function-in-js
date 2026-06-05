@@ -18,6 +18,6 @@ let red=Math.floor(Math.random()*255);
 let green=Math.floor(Math.random()*255);
 let blue=Math.floor(Math.random()*255);
 
-let color=`rgb (${red},${green},${blue})`;
+let color=`rgb(${red},${green},${blue})`;//rgb(255,0,0) no space between betweem rgb
 return color;
 }
