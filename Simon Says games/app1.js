@@ -32,7 +32,7 @@ function levelUp(){
     h2.innerText=`Level ${level}`;                         //that level refelect in heading
 
     //which random button choose or which button is flash?
-    let randIdx=Math.floor(Math.random()*3);                      //acees color which are fixed using  idx
+    let randIdx=Math.floor(Math.random()*4);                      //acees color which are fixed using  idx
     let randColor=btns[randIdx];                                 //randIdx get of our color put randcolor
     let randBtn=document.querySelector(`.${randColor}`);         //randcolor color put in randBtn
     gameSeq.push(randColor);//color generte by games store games seq
