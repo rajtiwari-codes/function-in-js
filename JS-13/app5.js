@@ -1,15 +1,14 @@
 // we use university api-->in html search country nmae  and get value in html not in console or js
-//
-let url="http://universities.hipolabs.com/search?name=";
+let url="https://colleges-api-india.fly.dev/colleges/";
 let btn=document.querySelector("button");
 
 //S-1 on clicking button country name enetered by user S-2 call to genetre clg nae
 btn.addEventListener("click",async()=>{
-let country=document.querySelector("input").value;
-console.log(country);
+let state=document.querySelector("input").value;
+console.log(state);
 
 //S-3
-let colArr=await getCollage(country);//that country collage which u get call another function for making list
+let colArr=await getCollage(state);//that country collage which u get call another function for making list
 show(colArr);//calling another function for making list
 }
 );
@@ -26,17 +25,14 @@ for(col of colArr){ //all the clg name group
     list.appendChild(li);//location?? li ke child  ul me
 }
 }
-
-
-
-
 //S-2  generte clg according to the input of country
-async function getCollage(country){
+async function getCollage(state){
     try{
-    let res=await axios.get(url+country);//await use beacuse async is asychronuous function
+    let res=await axios.get(url+state);//await use beacuse async is asychronuous function
     return res.data;
     }catch(e){
         console.log("error is :",e);
         return [];//return empty array if erroe can come
     }
 }
+//problem is api not suppeorted only
